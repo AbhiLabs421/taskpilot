@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taskpilot"
+version = "0.1.0"
+description = "Fast, dependency-free workflows and AI agents for Python: plain functions wired by name, parallel by default, with retries, checkpoints, Ollama/OpenAI clients, MCP and A2A."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "rebel" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["workflow", "dag", "pipeline", "agents", "llm", "ollama", "orchestration", "async", "langgraph-alternative", "mcp", "a2a"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Framework :: AsyncIO",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/AbhiLabs421/taskpilot"
+Source = "https://github.com/AbhiLabs421/taskpilot"
+Issues = "https://github.com/AbhiLabs421/taskpilot/issues"
+Documentation = "https://github.com/AbhiLabs421/taskpilot/blob/main/docs/TUTORIAL.md"
+Changelog = "https://github.com/AbhiLabs421/taskpilot/blob/main/CHANGELOG.md"
+
+[project.scripts]
+taskpilot = "taskpilot.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+taskpilot = ["py.typed"]
